@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class MID {
     public static ArrayList<Book> booklist = new ArrayList<>();
-    private static final int MAX-BOOKS = 7;
+    private static final int MAX_BOOKS = 7;
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
@@ -54,7 +54,7 @@ public class MID {
             return;
         }
         System.out.println("Masukkan Judul Buku: ");
-        String title = scanner.nextInt();
+        String title = scanner.next();
         System.out.println("Masukkan Penulis Buku: ");
         String author = scanner.next();
 
