@@ -84,12 +84,12 @@ public class MID {
         System.out.println("Buku tidak ditemukan!!");
     }
 
-    private static void deletedBook(Scanner scanner) {
+    private static void deleteBook(Scanner scanner) {
         System.out.println("Masukkan Buku yang ingin di Hapus: ");
         String Title = scanner.next();
 
         for (Book book : booklist) {
-            if (book.getTitle().equals(title)) {
+            if (book.getTitle().equals(Title)) {
                 booklist.remove(book);
                 System.out.println("Buku Berhasil di Hapus!");
             }
@@ -101,7 +101,7 @@ public class MID {
         System.out.println("Pilihan anda salah!");
     }
 
-    private static void bookLimitReached() {
+    private static void bookLimitMaximum() {
         System.out.println("Penambahan buku telah mencapai batas!");
     }
 
