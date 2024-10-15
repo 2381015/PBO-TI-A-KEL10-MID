@@ -81,7 +81,7 @@ public class MID {
             }
         }
 
-        System.out.println("Buku tidak ditemukan!");
+        System.out.println("Buku tidak ditemukan!!");
     }
 
     private static void deletedBook(Scanner scanner) {
@@ -94,7 +94,45 @@ public class MID {
                 System.out.println("Buku Berhasil di Hapus!");
             }
         }
-        System.out.println("Buku Tidak Ditemukan!");
+        System.out.println("Buku Tidak Ditemukan!!");
     }
 
+    private static void invalidChoice() {
+        System.out.println("Pilihan anda salah!");
+    }
+
+    private static void bookLimitReached() {
+        System.out.println("Penambahan buku telah mencapai batas!");
+    }
+
+    private static void clearHistory() {
+        booklist.clear();
+        System.out.println("Riwayat telah dihapus!");
+    }
+}
+
+class Book {
+    private String title;
+    private String author;
+
+    public Book(String title, String author) {
+        this.title = title;
+        this.author = author;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public String getAuthor() {
+        return author;
+    }
+
+    public void setAuthor(String author) {
+        this.author = author;
+    }
 }
