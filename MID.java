@@ -79,9 +79,9 @@ public class MID {
                 System.out.println("Buku Berhasil di Edit!");
                 return;
             }
-
         }
 
+        System.out.println("Buku tidak ditemukan!");
     }
 
 }
