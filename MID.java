@@ -48,4 +48,40 @@ public class MID {
         }
     }
 
+    private static void addBook(Scanner scanner) {
+        if (bookList.size() >= MAX_BOOKS) {
+            bookLimitReached();
+            return;
+        }
+        System.out.println("Masukkan Judul Buku: ");
+        String title = scanner.nextInt();
+        System.out.println("Masukkan Penulis Buku: ");
+        String author = scanner.next();
+
+        Book book= new Book (title, author);
+        booklist.add(book);
+        System.out.println("Buku Berhasil di Tambahkan!");
+    }
+
+    private static void editBook(Scanner scanner) {
+        System.out.println("Masukkan Judul Buku yang ingin di Edit: ");
+        String title = scanner.next();
+
+        for (Book book : bookList) {
+            if (book.getTitle().equals(title)) {
+                System.out.println("Masukkan Judul Buku yang Baru; ");
+                String newTitle = scanner.next();
+                System.out.println("Masukkan Penulis Buku yang Baru; ");
+                String newAuthor = scanner.next();
+
+                book.setTitle(newTitle);
+                book.setAuthor(newAuthor);
+                System.out.println("Buku Berhasil di Edit!");
+                return;
+            }
+
+        }
+
+    }
+
 }
