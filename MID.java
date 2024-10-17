@@ -1,4 +1,3 @@
-import java.awt.print.Book;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -49,7 +48,7 @@ public class MID {
     }
 
     private static void addBook(Scanner scanner) {
-        if (bookList.size() >= MAX_BOOKS) {
+        if (booklist.size() >= MAX_BOOKS) {
             bookLimitReached();
             return;
         }
@@ -67,7 +66,7 @@ public class MID {
         System.out.println("Masukkan Judul Buku yang ingin di Edit: ");
         String title = scanner.next();
 
-        for (Book book : bookList) {
+        for (Book book : booklist) {
             if (book.getTitle().equals(title)) {
                 System.out.println("Masukkan Judul Buku yang Baru; ");
                 String newTitle = scanner.next();
@@ -101,7 +100,7 @@ public class MID {
         System.out.println("Pilihan anda salah!");
     }
 
-    private static void bookLimitMaximum() {
+    private static void bookLimitReached() {
         System.out.println("Penambahan buku telah mencapai batas!");
     }
 
