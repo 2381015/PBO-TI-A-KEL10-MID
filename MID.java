@@ -85,15 +85,23 @@ public class MID {
 
     private static void deleteBook(Scanner scanner) {
         System.out.println("Masukkan Buku yang ingin di Hapus: ");
-        String Title = scanner.next();
+        String title = scanner.next();
 
-        for (Book book : booklist) {
-            if (book.getTitle().equals(Title)) {
-                booklist.remove(book);
+        boolean found = false;
+        for (int i = 0; i < booklist.size(); i++) {
+            Book book = booklist.get(i);
+            if (book.getTitle().equals(title)) {
+                booklist.remove(i);
                 System.out.println("Buku Berhasil di Hapus!");
+                found = true;
+                break;
             }
         }
-        System.out.println("Buku Tidak Ditemukan!!");
+
+        // If the book was not found, print the message
+        if (!found) {
+            System.out.println("Buku Tidak Ditemukan!!");
+        }
     }
 
     private static void invalidChoice() {
