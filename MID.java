@@ -98,7 +98,7 @@ public class MID {
             }
         }
 
-        // If the book was not found, print the message
+
         if (!found) {
             System.out.println("Buku Tidak Ditemukan!!");
         }
@@ -112,6 +112,10 @@ public class MID {
         System.out.println("Penambahan buku telah mencapai batas!");
     }
 
+    private static void clearHistory() {
+        booklist.clear();
+        System.out.println("Riwayat telah dihapus!");
+    }
 }
 
 class Book {
